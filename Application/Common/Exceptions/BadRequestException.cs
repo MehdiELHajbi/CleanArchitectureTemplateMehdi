@@ -1,5 +1,4 @@
-﻿using Application.Common.Response;
-using System;
+﻿using System;
 
 namespace Application.Common.Exceptions
 {
