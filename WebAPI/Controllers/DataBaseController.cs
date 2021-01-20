@@ -1,5 +1,6 @@
 ﻿using Application.Features.Common.Models;
-using Application.Features.DataBases.Commands;
+using Application.Features.DataBases.Commands.Create;
+using Application.Features.DataBases.Commands.Update;
 using Application.Features.DataBases.Queries;
 using Application.Features.DataBases.Queries.ExportGetListDataBeses;
 using Microsoft.AspNetCore.Http;
@@ -48,6 +49,17 @@ namespace WebAPI.Controllers
         {
             var response = await Mediator.Send(createCategoryCommand);
             return Ok(response);
+        }
+
+
+        [HttpPut(Name = "UpdateEvent")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        //[ProducesDefaultResponseType]
+        public async Task<ActionResult<UpdateDataBesesCommandResponse>> Update([FromBody] UpdateDataBesesCommand updateEventCommand)
+        {
+            var response = await Mediator.Send(updateEventCommand);
+            return response;
         }
 
     }
