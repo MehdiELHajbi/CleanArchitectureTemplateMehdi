@@ -1,5 +1,4 @@
-﻿using Application.Common.Response;
-using System;
+﻿using System;
 
 namespace Application.Common.Exceptions
 {
@@ -7,10 +6,7 @@ namespace Application.Common.Exceptions
     {
         public BadRequestException(string message) : base(message)
         {
-            reponseKO = new ReponseKO();
-            reponseKO.Message = message;
-        }
 
-        public ReponseKO reponseKO { get; }
+        }
     }
 }
