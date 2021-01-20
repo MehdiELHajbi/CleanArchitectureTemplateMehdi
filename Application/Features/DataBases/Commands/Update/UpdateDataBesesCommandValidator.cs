@@ -1,10 +1,10 @@
 ﻿using FluentValidation;
 
-namespace Application.Features.DataBases.Commands
+namespace Application.Features.DataBases.Commands.Update
 {
-    public class CreateDataBesesValidator : AbstractValidator<CreateDataBesesCommand>
+    public class UpdateDataBesesCommandValidator : AbstractValidator<UpdateDataBesesCommand>
     {
-        public CreateDataBesesValidator()
+        public UpdateDataBesesCommandValidator()
         {
             RuleFor(p => p.NameDataBase)
                .NotEmpty().WithMessage("{PropertyName} is required.")

@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Application.Features.DataBases.Commands
+namespace Application.Features.DataBases.Commands.Create
 {
     public class CreateDataBesesCommand : IRequest<CreateDataBesesCommandResponse>
     {
