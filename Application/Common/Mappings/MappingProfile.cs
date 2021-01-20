@@ -1,4 +1,4 @@
-﻿using Application.Features.DataBases.Commands;
+﻿using Application.Features.DataBases.Commands.Create;
 using Application.Features.DataBases.Queries;
 using Application.Features.DataBases.Queries.ExportGetListDataBeses;
 using AutoMapper;
@@ -17,6 +17,8 @@ namespace Application.Common.Mappings
 
             // Command
             CreateMap<DataBase, CreateDataBesesCommand>().ReverseMap();
+            CreateMap<DataBase, CreateDataBaseDto>().ReverseMap();
+
         }
     }
 }
