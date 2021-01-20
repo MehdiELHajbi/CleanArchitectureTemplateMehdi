@@ -36,22 +36,18 @@ namespace WebAPI.Middleware
 
             var result = string.Empty;
 
-
             switch (exception)
             {
                 case ValidationException validationException:
                     httpStatusCode = HttpStatusCode.BadRequest;
-                    result = JsonConvert.SerializeObject(validationException.reponseKO);
-
+                    result = JsonConvert.SerializeObject(validationException.ValdationErrors);
                     break;
                 case BadRequestException badRequestException:
                     httpStatusCode = HttpStatusCode.BadRequest;
-                    result = JsonConvert.SerializeObject(badRequestException.reponseKO);
-
+                    result = badRequestException.Message;
                     break;
                 case NotFoundException notFoundException:
                     httpStatusCode = HttpStatusCode.NotFound;
-                    result = JsonConvert.SerializeObject(notFoundException.reponseKO);
                     break;
                 case Exception ex:
                     httpStatusCode = HttpStatusCode.BadRequest;

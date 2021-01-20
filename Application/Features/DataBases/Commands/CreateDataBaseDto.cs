@@ -1,4 +1,4 @@
-﻿namespace Application.Features.DataBases.Commands.Create
+﻿namespace Application.Features.DataBases.Commands
 {
     public class CreateDataBaseDto
     {

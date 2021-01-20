@@ -1,5 +1,4 @@
-﻿using Application.Common.Response;
-using System;
+﻿using System;
 
 namespace Application.Common.Exceptions
 {
@@ -8,11 +7,6 @@ namespace Application.Common.Exceptions
         public NotFoundException(string name, object key)
             : base($"{name} ({key}) is not found")
         {
-            reponseKO = new ReponseKO();
-            reponseKO.Message = $"{name} ({key}) is not found";
-
         }
-
-        public ReponseKO reponseKO { get; }
     }
 }
